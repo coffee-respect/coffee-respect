@@ -447,12 +447,24 @@ footer{background:var(--dark);color:rgba(255,255,255,.4);padding:1.4rem 2.5rem;d
       <p class="slbl">Order Flow</p>
       <div class="dvd"></div>
       <h2 class="sh2">注文から納品までの<em>流れ</em></h2>
-      <p class="sbody">メールでご注文→内容確認→Square決済リンク送付→カード決済→焙煎・発送。納品まで2週間前後をご予定ください。</p>
+      <p class="sbody">メールでご連絡→ヒアリング→ご納得後にご注文受付→Square決済→焙煎・発送。納品まで2週間前後をご予定ください。</p>
     </div>
-    <div class="steps rev">
-      <div class="step"><div class="snum">1</div><div class="stxt"><h4>メールでお問い合わせ・ご注文</h4><p>coffee-respect@japan.nifty.jp またはフォームより、ご希望の豆の種類・数量（3kg〜）をお送りください。</p></div><span class="sbadge bmail">メール</span></div>
-      <div class="step"><div class="snum">2</div><div class="stxt"><h4>内容確認・お見積りご案内</h4><p>1〜2営業日以内に豆の在庫・焙煎スケジュール・金額をご案内します。</p></div><span class="sbadge bday">1〜2営業日</span></div>
-      <div class="step"><div class="snum">3</div><div class="stxt"><h4>Squareより決済リンクを送付</h4><p>Squareの決済リンクをメールでお送りします。リンクを開いてカード情報を入力するだけで完了。アカウント登録不要です。</p></div><span class="sbadge bsq">Square決済</span></div>
+
+    <!-- ヒアリング重要告知 -->
+    <div class="rev" style="margin-top:2rem;background:var(--n);border-left:4px solid var(--g);padding:1.8rem 2rem;display:flex;gap:1.5rem;align-items:flex-start">
+      <div style="flex-shrink:0;width:48px;height:48px;background:var(--g);display:flex;align-items:center;justify-content:center;border-radius:0">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--n2);font-weight:300;line-height:1">!</span>
+      </div>
+      <div>
+        <h4 style="font-size:.92rem;font-weight:500;color:var(--g);margin-bottom:.6rem;letter-spacing:.05em">ご注文受付前に必ずヒアリングを行います</h4>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.8);line-height:2.1">当社では、お客様のご用途・ご使用環境・ご要望を丁寧にお伺いするヒアリングを実施しています。<br>ヒアリングの内容にご納得いただいた後、初めてご注文の受付となります。<br><br>これは「合わなかった」「思っていたものと違う」というトラブルを防ぎ、お互いに長く良いお取引を続けるための当社のこだわりです。<br>お急ぎの場合もまずはお気軽にお問い合わせください。</p>
+      </div>
+    </div>
+
+    <div class="steps rev" style="margin-top:1.5rem">
+      <div class="step"><div class="snum">1</div><div class="stxt"><h4>メールでお問い合わせ</h4><p>coffee-respect@japan.nifty.jp またはフォームより、ご希望の豆の種類・数量（3kg〜）・ご用途をお送りください。</p></div><span class="sbadge bmail">メール</span></div>
+      <div class="step" style="background:var(--gl);border-left:3px solid var(--g)"><div class="snum" style="background:var(--g);color:var(--n2)">2</div><div class="stxt"><h4 style="color:var(--n)">ヒアリング・ご提案</h4><p style="color:var(--mid)">ご用途・ご使用環境・ご要望を丁寧にお伺いします。最適な豆・焙煎度・数量をご提案し、内容にご納得いただいてから次のステップへ進みます。<strong style="color:var(--n)">ご納得いただけない場合はご注文をお受けできません。</strong></p></div><span class="sbadge" style="background:var(--n);color:var(--g);border:1px solid var(--n)">重要</span></div>
+      <div class="step"><div class="snum">3</div><div class="stxt"><h4>お見積り・Square決済リンク送付</h4><p>ヒアリング後、お見積りをご案内します。ご確認いただきましたらSquareの決済リンクをメールでお送りします。リンクをクリックしてカード入力するだけで完了です。</p></div><span class="sbadge bsq">Square決済</span></div>
       <div class="step"><div class="snum">4</div><div class="stxt"><h4>決済確認→焙煎スケジュール組み込み</h4><p>決済確認後、正式受注として焙煎スケジュールに組み込みます。気温・湿度・生豆の状態を確認しながら丁寧に焙煎します。</p></div><span class="sbadge bsq">受注確定</span></div>
       <div class="step"><div class="snum">5</div><div class="stxt"><h4>工場直送・納品</h4><p>宅配便で工場から直接発送。追跡番号をメールでご連絡します。注文から納品まで2週間前後が目安です。</p></div><span class="sbadge bship">工場直送</span></div>
     </div>
@@ -825,6 +837,51 @@ footer{background:var(--dark);color:rgba(255,255,255,.4);padding:1.4rem 2.5rem;d
         <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. 食品の性質上、お客様都合による返品・交換はお受けできません。商品に瑕疵がある場合は到着後7日以内にメールにてご連絡ください。</p>
       </div>
 
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. お断りされる場合はありますか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. はい、以下の場合はお取引をお断りさせていただくことがあります。ご用途・ご使用環境・ご要望などについて当社からのヒアリングにご協力いただけない場合、お客様のニーズに当社のサービスが適切にお応えできないと判断した場合は、品質とサービスの維持を目的として、やむを得ずお断りさせていただくことがございます。あらかじめご了承ください。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. カスタマーハラスメント・迷惑行為への対応について</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. 当社は、スタッフが安心して業務に集中できる環境を守るため、以下の行為が確認された場合、お取引をお断りまたは即時中止させていただきます。<br><br>・暴言・脅迫・侮辱などの言動<br>・長時間・繰り返しにわたる迷惑電話・メール<br>・合理的な範囲を超えた過度な要求<br>・SNS・口コミ等での根拠のない誹謗中傷<br>・その他スタッフへの嫌がらせと判断される行為<br><br>お問い合わせはメールにて承っております。誠実なご対応をお約束しますが、上記に該当する場合は対応をお断りし、必要に応じて法的措置を取る場合があります。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. お問い合わせへの返信はいつ届きますか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. お問い合わせいただいてから、弊社営業日3日以内にご返信いたします。3日を過ぎても返信がない場合は、メールが届いていない可能性がございます。大変お手数ですが、再度お問い合わせいただきますようお願いいたします。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. 焙煎豆について知っておいてほしいこと</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2.2;margin-top:.8rem;display:none">焙煎は、レシピ通りに進めても、その日の気候や豆の呼吸によって微細な変化が生まれる"手仕事"の世界です。プロの焙煎士であっても、自然のゆらぎを完全にゼロにすることはできません。<br><br>その代わりに、当店では毎回の焙煎で豆の声を聞き、最適な火加減と時間を探りながら、安定した味わいに近づける努力を続けています。<br><br>小さな違いも、コーヒーの豊かな表情としてお楽しみいただければ幸いです。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. コーヒーマシンの導入相談はできますか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2.2;margin-top:.8rem;display:none">A. はい、ご相談承っております。<br><br>
+<strong style="color:var(--n)">大型コーヒーマシン</strong><br>
+商社帳合を通じて特別価格でご提供しております。お客様に最良の条件で導入いただけるよう、弊社の利益は一切頂戴しておりません。つきましては、誠に恐れ入りますが、お支払いは現金にてお願いしております。その分、導入後はコーヒー豆の供給を通じて、継続的にご協力させていただきます。<br><br>
+<strong style="color:var(--n)">小型コーヒーマシン</strong><br>
+モデルによってはAmazonの販売価格が最もお得な場合がございます。その際は、当店の利益よりもお客様のメリットを優先し、率直に最安値の購入先をご案内しております。<br><br>
+常に誠実なご提案を心がけておりますので、どうぞお気軽にご相談ください。末永いお付き合いを願っております。</p>
+      </div>
+
     </div>
   </div>
 </div>
@@ -878,14 +935,15 @@ footer{background:var(--dark);color:rgba(255,255,255,.4);padding:1.4rem 2.5rem;d
         <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">運営統括責任者</td><td style="padding:.85rem 1.2rem;color:var(--dark)">TOSHICHIKA WAKO</td></tr>
         <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">所在地</td><td style="padding:.85rem 1.2rem;color:var(--dark)">866-5 Hatsutomi, Kamagaya-shi, Chiba 273-0121, Japan</td></tr>
         <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">連絡先</td><td style="padding:.85rem 1.2rem;color:var(--dark)">coffee-respect@japan.nifty.jp<br><span style="font-size:.7rem;color:var(--mu)">※お問い合わせはメールにて承ります</span></td></tr>
-        <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">販売価格</td><td style="padding:.85rem 1.2rem;color:var(--dark)">各商品ページまたはお見積りにて表示（消費税込）</td></tr>
+        <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">販売価格</td><td style="padding:.85rem 1.2rem;color:var(--dark)">各商品ページまたはお見積りにて表示（消費税別）</td></tr>
         <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">商品代金以外の費用</td><td style="padding:.85rem 1.2rem;color:var(--dark)">送料：実費（注文確認時にご案内）<br>消費税：食品（軽減税率8%）、送料（10%）</td></tr>
         <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">支払い方法</td><td style="padding:.85rem 1.2rem;color:var(--dark)">クレジットカード（Square決済）<br>Visa・Mastercard・JCB・American Express・Diners Club</td></tr>
         <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">支払い時期</td><td style="padding:.85rem 1.2rem;color:var(--dark)">注文確認後、Squareより決済リンクを送付。リンクより決済完了をもって受注確定</td></tr>
         <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">引渡し時期</td><td style="padding:.85rem 1.2rem;color:var(--dark)">決済確認後、2週間前後を目安に発送（受注焙煎のため）</td></tr>
         <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">返品・交換について</td><td style="padding:.85rem 1.2rem;color:var(--dark)">食品の性質上、お客様都合による返品・交換はお受けできません。<br>商品に瑕疵がある場合は到着後7日以内にご連絡ください。</td></tr>
         <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">販売数量</td><td style="padding:.85rem 1.2rem;color:var(--dark)">最小ロット3kgより（業務用販売のみ）</td></tr>
-        <tr><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">特記事項</td><td style="padding:.85rem 1.2rem;color:var(--dark)">東京都を除き、同一市町村内での販売は2〜3社様に限定しています。上限到達時は新規受付をお待ちいただく場合があります。</td></tr>
+        <tr style="border-bottom:1px solid var(--bd)"><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top">特記事項</td><td style="padding:.85rem 1.2rem;color:var(--dark)">東京都を除き、同一市町村内での販売は2〜3社様に限定しています。上限到達時は新規受付をお待ちいただく場合があります。</td></tr>
+        <tr><td style="padding:.85rem 1.2rem;color:var(--mu);background:var(--off);vertical-align:top;font-weight:500">反社会的勢力の排除</td><td style="padding:.85rem 1.2rem;color:var(--dark)">当社は反社会的勢力との取引を一切行いません。</td></tr>
       </table>
     </div>
   </div>
