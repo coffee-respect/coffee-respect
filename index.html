@@ -298,6 +298,14 @@ footer{background:var(--dark);color:rgba(255,255,255,.4);padding:1.4rem 2.5rem;d
   footer{flex-direction:column;gap:.5rem;text-align:center}
   .step{grid-template-columns:44px 1fr}
   .sbadge{display:none}
+  /* About・Sample・FAQ・Tokusho スマホ対応 */
+  div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;gap:2rem !important}
+  div[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr !important;gap:1rem !important}
+  table{font-size:.68rem !important}
+  table td{padding:.6rem .8rem !important}
+  .faq-item h4{font-size:.76rem !important}
+  nav{padding:.8rem 1rem}
+  .logo{font-size:.95rem}
 }
 </style>
 </head>
@@ -308,6 +316,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.4);padding:1.4rem 2.5rem;d
   <ul>
     <li><a href="#area">地域限定販売</a></li>
     <li><a href="#sample">有料サンプル</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#flow">ご注文の流れ</a></li>
     <li><a href="#cospa">コスパの理由</a></li>
     <li><a href="#about">会社概要</a></li>
@@ -725,7 +734,102 @@ footer{background:var(--dark);color:rgba(255,255,255,.4);padding:1.4rem 2.5rem;d
   </div>
 </div>
 
-<!-- ABOUT -->
+<!-- FAQ -->
+<div class="sec" id="faq" style="background:var(--bg)">
+  <div style="max-width:960px;margin:0 auto">
+    <div class="rev">
+      <p class="slbl">FAQ</p>
+      <div class="dvd"></div>
+      <h2 class="sh2">よくある<em>ご質問</em></h2>
+      <p class="sbody">お問い合わせの多いご質問をまとめました。</p>
+    </div>
+    <div class="rev" style="margin-top:2rem;display:grid;gap:1px;background:var(--bd);border:1px solid var(--bd)">
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. 最小注文ロットはいくつですか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. 最小ロットは3kgからです。3kg未満は品質管理上対応できません。3kgはベーカリーやカフェが2〜4週間で消費できる現実的な業務用量です。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. 全国配送できますか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. はい、全国配送対応しています。工場（千葉県鎌ケ谷市）から宅配便で直接発送します。送料は注文確認時にご案内します。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. サンプルはありますか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. はい、有料サンプル（2,000円税込）をご用意しています。品質に自信があるからこそ有料です。サンプルにご満足いただきご契約となった場合、サンプル代金は初回ご注文金額に充当いたします。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. 納品までどのくらいかかりますか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. ご注文から納品まで2週間前後が目安です。受注後に焙煎する「受注焙煎」のため、在庫コストがゼロ。その分を生豆の品質に還元しています。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. 支払い方法は何がありますか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. クレジットカード払いのみ（Square決済）です。Visa・Mastercard・JCB・American Express・Diners Clubに対応しています。請求書払い・銀行振込・現金は対応していません。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. なぜコスパが良いのですか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. 問屋・卸・ブローカーを介さず工場から直送するため、中間マージンがゼロです。また受注焙煎・シンプルな包装・Square決済による事務コスト削減など、すべてのコストを生豆の品質に還元しています。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. オリジナルブレンドは作れますか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. はい、対応しています。ブレンド・焙煎度・パッケージまでお店のコンセプトに合わせてゼロから一緒に作ります。まずはお問い合わせフォームからご相談ください。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. 地域限定販売とはどういう意味ですか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. 東京都を除き、同一市町村内での販売を2〜3社様に限定しています。不必要な競合・価格競争を防ぎ、小規模店様でも安定して仕入れ続けられる環境を守るための制度です。上限到達時は新規受付をお待ちいただく場合があります。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. どんな業種でも注文できますか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. はい、コーヒーを提供するすべての事業者様に対応しています。ベーカリー・パティスリー・カフェ・レストラン・ホテル・オフィス・美容院など業種を問わずお気軽にご相談ください。</p>
+      </div>
+
+      <div class="faq-item" style="background:var(--wh);padding:1.4rem 1.6rem;cursor:pointer" onclick="toggleFaq(this)">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="font-size:.84rem;font-weight:500;color:var(--n)">Q. 返品・交換はできますか？</h4>
+          <span style="color:var(--n);font-size:1.2rem;font-weight:300;flex-shrink:0;margin-left:1rem">＋</span>
+        </div>
+        <p style="font-size:.76rem;color:var(--mid);line-height:2;margin-top:.8rem;display:none">A. 食品の性質上、お客様都合による返品・交換はお受けできません。商品に瑕疵がある場合は到着後7日以内にメールにてご連絡ください。</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 <div class="sec" id="about" style="background:var(--bg)">
   <div style="max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
     <div class="rev">
@@ -802,6 +906,19 @@ footer{background:var(--dark);color:rgba(255,255,255,.4);padding:1.4rem 2.5rem;d
 </footer>
 
 <script>
+function toggleFaq(el) {
+  const answer = el.querySelector('p');
+  const icon = el.querySelector('span');
+  if (answer.style.display === 'none') {
+    answer.style.display = 'block';
+    icon.textContent = '－';
+    el.style.background = 'var(--off)';
+  } else {
+    answer.style.display = 'none';
+    icon.textContent = '＋';
+    el.style.background = 'var(--wh)';
+  }
+}
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
